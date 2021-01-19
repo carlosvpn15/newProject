@@ -250,21 +250,52 @@ html {
 }
 
 
-/* <<___(NAV-BAR )________________________________________________________________(MOBILE-LANDSCAPE)___>> */
-@media (max-width: 760px) { 
+/* <<___(NAV-BAR)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
 
 
 
 
 }
 
-/* <<___(NAV-BAR )________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 600px) { 
+/* <<___(NAV-BAR)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
   /* BORDER-FOR-MOBILE-ICON */
   .menu-icon {
     border: none;
     border-radius: 1px;
     transition: background .5s;
+  }
+
+  /* -- (NAVBAR-BRAND) -- */
+  .navbar .brand {
+    float: left;
+    display: block;
+    font-size: 18px;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: #4b4b4b;
+  }
+
+  /* -- (NAVBAR-BTN) -- */
+  .navbar ul a {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5%;
+    padding: 20px;
+    border-right: none;
+    color: #303841;
+    border-bottom: none;
+    border-radius: none;
+    background: none;
+    transition: transform .3s ease-out;
+  }
+
+ /* -- (BTN-TOGGLE) -- */
+  .navbar .menu-icon {
+    border-radius: 8px;
+    padding: 28px 20px;
+    margin-right: 60px;
   }
 
 
@@ -407,7 +438,7 @@ footer {
 
 /* <<___(GRID-LAYOUT)____________________________________________________________(MOBILE-PORTRAIT)___>> */
 
-@media (max-width: 500px) { 
+@media (max-width: 400px) { 
 
   /* <<<<< (CONTAINER) >>>>> */
   .container-f, .container-m, .container-s {
@@ -457,7 +488,7 @@ footer {
 }
 
 /* <<___(CONTAINER-HEADER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 600px) { 
+@media (max-width: 400px) { 
 
 }
 
@@ -560,7 +591,7 @@ footer {
 }
 
 /* <<___(PARALLAX-CONTAINER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 600px) { 
+@media (max-width: 400px) { 
   .parallax-text {
     padding: 50% 10%;
   }
@@ -630,7 +661,7 @@ footer {
 }
 
 /* <<___(CARD-CONTAINER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 600px) { 
+@media (max-width: 400px) { 
 
 }
 
