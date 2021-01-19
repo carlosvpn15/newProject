@@ -259,7 +259,7 @@ html {
 }
 
 /* <<___(NAV-BAR)________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 400px) { 
+@media (max-width: 500px) { 
   /* BORDER-FOR-MOBILE-ICON */
   .menu-icon {
     border: none;
