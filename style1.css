@@ -825,8 +825,8 @@ img {width: 100%;}
 
 
   /* <<<<< (IMAGE-SIZE) >>>>> */
-  .img1 {width: 250px; }
-  
+  .img1 {width: 200px; }
+
   /* <<<<< (IMAGE-POSITION) >>>>> */
   .img-center {
     display: flex;
