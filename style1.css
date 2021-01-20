@@ -825,7 +825,7 @@ img {width: 100%;}
 
 
   /* <<<<< (IMAGE-SIZE) >>>>> */
-  .img1 {width: 200px; }
+  .img1 {width: 100%; }
 
   /* <<<<< (IMAGE-POSITION) >>>>> */
   .img-center {
