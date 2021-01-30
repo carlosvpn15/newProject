@@ -767,7 +767,7 @@ footer {
 @media (max-width: 768px) { 
 
   .card-ex-panel {
-    height: 95vh;
+    height: 85vh;
     border-radius: 0;
     width: 10%;
     margin: 5px;
