@@ -58,6 +58,14 @@ a {
 
 .menu li a {display: block; }
 
+
+.item {
+	width: 100%;
+	text-align: center;
+	order: 3;
+	display: none;
+}
+
 /* <<<<< (NAVBAR-BTN) >>>>> */
 .btn-nav {
     border: 0;
@@ -67,35 +75,38 @@ a {
 }
 
 .btn-nav:hover {
-  border: solid black  2px;
-  background-color: orange;
-  color: rgb(34, 29, 29);
+  border: none;
+  background-color:0;
+  color: 0;
 }
 
-.btn.second {border-bottom: 1px #444 solid; }
+.btn.second {
+  border-bottom: 1px #444 solid; 
+}
+
+.item.btn {
+  order: 2;
+}
 
 .toggle {
 	cursor: pointer;
 	order: 1;
 }
 
-.item.btn {order: 2;}
 
-.item {
-	width: 100%;
-	text-align: center;
-	order: 3;
-	display: none;
-}
-
-/* <<<<< (  ) >>>>> */
+/* <<<<< (BTN-ACTIVE) >>>>> */
 .item.active {display: block;}
 
 /* <<<<< (MOBILE-ICON) >>>>> */
 .fas {color: white;}
 
 /* <<<<< (NAVBAR-BRAND-LOGO) >>>>> */
-.logo2 {
+.brand {
+  font-size: 20px;
+  color: white;
+}
+
+.brand2 {
   font-size: 20px;
   color: red;
 }
@@ -107,41 +118,70 @@ a {
 @media (min-width: 600px) {
 	
   .menu { justify-content: center;}
-  
-  .logo {flex:1;}
 
-	.item.btn {
+  .item.btn {
 		display: block;
 		width: auto;
 		order:1;
+	}
+  
+  .logo {flex:1;}
+
+  /* <<<<< (NAVBAR-BTN) >>>>> */
+  .btn-nav-second {
+    padding: 10px 25px;
+		background: rgb(230, 178, 9);
+		border: 1px solid rgb(230, 178, 9);
+		border-radius: 8px;
+		text-decoration: none;
+  }
+
+  .btn-nav-second:hover {
+		background: rgb(187, 146, 13);
+		border: 1px solid rgb(187, 146, 13);
+  }
+
+  .btn-nav-second2 {
+    padding: 10px 25px;
+		background:transparent;
+		border: 1px solid rgb(230, 178, 9);
+		border-radius: 8px;
+		text-decoration: none;
+  }
+
+  .btn-nav-second2:hover {
+		background: rgb(230, 178, 9);
+		border: 1px solid rgb(230, 178, 9);
+  }
+
+  .btn.second {
+		border: 0;
 	}
 
 	.toggle {
     order: 2;
     margin-right: 10px;
-		}
-	.btn.second {
-		border: 0;
+  }
+    
 
-	}
 
-	.btn a {
+	/* .btn a {
 		padding: 7px 15px;
 		background: teal;
 		border: 1px solid #006d6d;
 		border-radius: 50em;
 		text-decoration: none;
-	}
+	} */
 
-	.btn.second a {
+	/* .btn.second a {
 		background: transparent;
 	}
 
 	.btn.second a:hover {
 		background: transparent;
-	}
+	} */
 
-	.btn:not(.second) a:hover {
+	/* .btn:not(.second) a:hover {
 		background: #006d6d;
 		border-color: #005959;
 	}
@@ -149,7 +189,7 @@ a {
 	.btn a:hover {
 		color: #ddd;
 	}
-	
+	 */
 }
 
 /* <<___(NAV-BAR)________________________________________________________________(DESKTOP)___>> */
@@ -212,10 +252,13 @@ a {
 
 /* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(DESKTOP)___>> */
 
-header, main, section, footer {
+main, section, footer {
 	height: auto;
 }
 
+header {
+  height: 100vh;
+}
 
 /* <<<<< (CONTAINER) >>>>> */
 .container-f, .container-m, .container-s, .container-c {
