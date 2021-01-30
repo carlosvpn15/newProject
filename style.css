@@ -1,0 +1,1238 @@
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> GENERAL-SETTING << */
+/* ========================================================================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Quicksand', 'halverica';
+    font-size: 15px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .space {padding-bottom: 110px;}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> NAV-BAR << */
+/* ========================================================================================================================== */
+
+/* <<___(NAV-BAR)________________________________________________________________(MOBILE)___>> */
+
+/* <<<<< (NAVBAR-CONTAINER) >>>>> */
+nav {
+	background-color: black;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+} 
+
+ul {list-style-type: none; }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  align-items: center;
+ }
+
+.menu li {
+	font-size: 16px;
+	padding: 15px 5px;
+}
+
+.menu li a {display: block; }
+
+/* <<<<< (NAVBAR-BTN) >>>>> */
+.btn-nav {
+    border: 0;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 10px 25px;
+}
+
+.btn-nav:hover {
+  border: solid black  2px;
+  background-color: orange;
+  color: rgb(34, 29, 29);
+}
+
+.btn.second {border-bottom: 1px #444 solid; }
+
+.toggle {
+	cursor: pointer;
+	order: 1;
+}
+
+.item.btn {order: 2;}
+
+.item {
+	width: 100%;
+	text-align: center;
+	order: 3;
+	display: none;
+}
+
+/* <<<<< (  ) >>>>> */
+.item.active {display: block;}
+
+/* <<<<< (MOBILE-ICON) >>>>> */
+.fas {color: white;}
+
+/* <<<<< (NAVBAR-BRAND-LOGO) >>>>> */
+.logo2 {
+  font-size: 20px;
+  color: red;
+}
+
+
+
+/* <<___(NAV-BAR)________________________________________________________________(TABLET)___>> */
+
+@media (min-width: 600px) {
+	
+  .menu { justify-content: center;}
+  
+  .logo {flex:1;}
+
+	.item.btn {
+		display: block;
+		width: auto;
+		order:1;
+	}
+
+	.toggle {
+		order: 2;
+		}
+	.btn.second {
+		border: 0;
+
+	}
+
+	.btn a {
+		padding: 7px 15px;
+		background: teal;
+		border: 1px solid #006d6d;
+		border-radius: 50em;
+		text-decoration: none;
+	}
+
+	.btn.second a {
+		background: transparent;
+	}
+
+	.btn.second a:hover {
+		background: transparent;
+	}
+
+	.btn:not(.second) a:hover {
+		background: #006d6d;
+		border-color: #005959;
+	}
+
+	.btn a:hover {
+		color: #ddd;
+	}
+	
+}
+
+/* <<___(NAV-BAR)________________________________________________________________(DESKTOP)___>> */
+
+@media (min-width: 1200px) { 
+
+  /* <<<<< (NAVBAR-CONTAINER) >>>>> */
+  nav {
+    background-color: transparent;
+    padding: 40px;
+    position: static;
+    width:90%;
+    margin: 0 auto;
+  } 
+
+	.item {
+		display: block; 
+		width: auto;	
+		order:1;
+	}
+
+	.btn {
+		order:2;
+	}
+
+  .logo {
+    order: 0;
+  }
+
+
+	.toggle {
+		order: 3;
+		display: none;
+	}
+
+	.menu li {padding: 15px 10px;}
+
+  .menu li.btn {padding-right: 0;}
+  
+  /* <<<<< (NAVBAR-BTN) >>>>> */
+  .btn-nav {
+    border: 2px white solid;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  .btn-nav:hover {
+    border: solid black  2px;
+    background-color: orange;
+    color: rgb(34, 29, 29);
+  }
+
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> GRID-LAYOUT | CONTAINER << */
+/* ========================================================================================================================== */
+
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(DESKTOP)___>> */
+
+header, main, section, footer {
+	height: auto;
+}
+
+
+/* <<<<< (CONTAINER) >>>>> */
+.container-f, .container-m, .container-s, .container-c {
+  height: auto;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+/* .container-z { position: absolute;
+  top: 670px;
+  left: 3px;
+} */
+
+.container-f { width: 100%; }
+.container-m { width: 90%;  }
+.container-s { width: 80%;  }
+
+.container-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 400px;
+ }
+
+footer {
+  height: 300px;
+}
+
+/* <<<<< (GRID-LAYOUT) >>>>> */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  height: auto;
+  padding: 1%;
+}
+
+.col2 {
+  order: 1;
+  width: 48%;
+  padding: 15px;
+  margin-bottom: 15px;
+  height: auto;
+  border: black solid 1px; 
+}
+
+.col3 {
+  width: 32%;
+  padding: 15px;
+  margin-bottom: 15px;
+  height: auto;
+  border: black solid 1px;
+}
+
+.col4 {
+  width: 23%;
+  padding: 15px;
+  margin-bottom: 15px;
+  height: auto;
+  border: black solid 1px;
+}
+
+/* <<<<< (CONTAINER-HEADER) >>>>> */
+.container-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 5%;
+  background-color: #eee;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(fondo.jpg);
+  /* background-image: url(fondo.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  background-attachment: scroll;
+}
+
+/* <<<<< (CONTAINER-BANNER) >>>>> */
+.banner {
+  width: 80%;
+  border-radius: 30px;
+  background-color: gray;
+  margin: 50px auto;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(TABLET)___>> */
+
+@media (max-width: 1199px) { 
+	
+  /* <<<<< (CONTAINER) >>>>> */
+  .container-f, .container-m, .container-s {
+    height: auto;
+    padding: 0 15px;
+   }
+
+  .container-f { width: 100%; }
+  .container-m { width: 90%;  }
+  .container-s { width: 90%;  }
+  
+  /* <<<<< (GRID-LAYOUT) >>>>> */
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+  }
+
+  .col4  {
+    flex-basis: 45%;
+  }
+
+  .col3 {
+    flex-basis: 48%;
+  }
+  
+}
+
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(MOBILE-LANDSCAPE)___>> */
+
+@media (max-width: 768px) { 
+
+  /* <<<<< (CONTAINER) >>>>> */
+  .container-f, .container-m, .container-s {
+    height: auto;
+    padding: 0 15px;
+  }
+
+  .container-f, .container-m, .container-s { width: 100%; }
+  
+  /* <<<<< (GRID-LAYOUT) >>>>> */
+  .row {
+    flex-flow: row wrap;
+    justify-content: center;
+   }
+
+  .col2, .col3, .col4  {
+      flex-basis: 95%;
+    }
+
+    /* <<<<< (CONTAINER-BANNER) >>>>> */
+    .banner {
+      width: 100%;
+      border-radius: 0;
+      background-color: gray;
+      margin: 50px auto;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+
+}
+
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(MOBILE-PORTRAIT)___>> */
+
+@media (max-width: 400px) { 
+
+  /* <<<<< (CONTAINER) >>>>> */
+  .container-f, .container-m, .container-s {
+    height: auto;
+    padding: 0 15px;
+   
+  }
+
+ 
+}
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> SIDE-2-SIDE-BOX << */
+/* ========================================================================================================================== */
+
+/* <<___(SIDE-2-SIDE-BOX)____________________________________________________________(DESKTOP)___>> */
+
+ .side-box-container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side-box-img {  
+  flex-basis: 50%;
+  background-color: #eee;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(fondo.jpg); */
+  background-image: url(fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 700px;
+  background-attachment: scroll;
+}
+
+.side-box-text {  
+  flex-basis: 50%;
+  padding: 5% 8%;
+}
+
+.left { order: 1; }
+.right { order: 2; }
+
+
+/* <<___(SIDE-2-SIDE-BOX)____________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) {
+  
+  .side-box-container {
+    height:700px;
+    align-content: flex-start;
+  }
+
+
+}
+
+/* <<___(SIDE-2-SIDE-BOX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+
+  .side-box-container {
+    height: 950px;
+    align-content: flex-start;
+    margin-bottom: 7%;
+  }
+
+  .side-box-img, .side-box-text  {
+    flex-basis: 100%;
+    height: 500px;
+  }
+
+
+
+
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> PARALLAX << */
+/* ========================================================================================================================== */
+
+/* <<___(PARALLAX)____________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< (PARALLAX-CONTAINER-FX) >>>>> */
+.parallax {
+  min-height: 500px;
+  background: transparent;
+}
+
+.parallax-text {
+  z-index: 1;
+  color: white;
+  padding: 12% 8%;
+}
+
+
+ /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
+.parallax-b-img {
+  background-color: #eee;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  background-attachment: fixed;
+}
+
+
+
+
+/* <<___(PARALLAX)____________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) {
+  
+  /* <<<<< (PARALLAX-BACKGROUND) >>>>> */
+  .parallax-text {
+    padding: 18% 10%;
+  }
+  
+  /* <<<<< (PARALLAX-BACKGROUND-HERO) >>>>> */
+  .parallax-b-img {
+    background-attachment: scroll;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+
+}
+
+/* <<___(PARALLAX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+ 
+  /* <<<<< (PARALLAX-BACKGROUND) >>>>> */
+  .parallax-text {
+    padding: 30% 10%;
+  }
+
+
+
+}
+
+/* <<___(PARALLAX)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+  .parallax-text {
+    padding: 50% 10%;
+  }
+
+
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> CARD-BOX << */
+/* ========================================================================================================================== */
+
+/* <<___(CARD-BOX)________________________________________________________________(DESKTOP)___>> */
+
+.card-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 16px;
+  height: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box-img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card-box-text {
+ font-size: 16px;
+ margin-top: 16px;
+
+ 
+}
+
+.card-box-btn {
+  border: 1px solid black;
+  padding: 12px;
+  margin-top: 16px;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 8px; 
+  background-color: #fff;
+  color: black;
+}
+
+.card-box-btn:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+
+/* <<___(CARD-BOX)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+  .card-box {
+    width: 45%;
+  }
+
+  .card-box-btn {
+    padding: 12px;
+    margin-top: 16px;
+   
+  }
+
+}
+
+
+/* <<___(CARD-BOX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+  .card-box {
+    width: 100%;
+  }
+
+
+}
+
+/* <<___(CARD-BOX)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> CARD-EXPANDER << */
+/* ========================================================================================================================== */
+
+/* <<___(CARD-EXPANDER)________________________________________________________________(DESKTOP)___>> */
+
+.card-ex-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-ex-panel {
+  height: 90vh;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  width: 10%;
+  background-size: auto 100%;
+  position: relative;
+  padding: 16px;
+  margin: 10px;
+  transition: width 0.7s ease-in-out;
+  border: 1px white solid;
+} 
+
+.card-ex-panel.active-ex {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-ex-img1 {
+  background-image: url(fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-ex-img2 {
+  background-image: url(fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.card-ex-text {
+  font-size: 24px;
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+
+.card-ex-btn {
+     opacity: 0;
+     padding: 10px 20%;
+     border-radius: 10px;
+     position: absolute;
+     bottom: 20px;
+     left: 20px;
+}
+
+.card-ex-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.card-ex-panel.active-ex h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s;
+}
+
+.card-ex-panel.active-ex button {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s;
+}
+
+
+/* <<___(CARD-EXPANDER)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+}
+
+
+/* <<___(CARD-EXPANDER)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+
+  .card-ex-panel {
+    height: 95vh;
+    border-radius: 0;
+    width: 10%;
+    margin: 5px;
+  } 
+
+  .card-ex-panel.active-ex {
+    width: 100%;
+    border-radius: 0;
+  }
+
+}
+
+/* <<___(CARD-EXPANDER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+    .card-ex-panel:nth-of-type(4),  .card-ex-panel:nth-of-type(5) {
+    display: none;
+  } 
+
+
+
+
+}
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> CARD-OVERLAY << */
+/* ========================================================================================================================== */
+
+/* <<___(CARD-OVERLAY)________________________________________________________________(DESKTOP)___>> */
+.card-overlay-container {
+  position: relative;
+  width:100%;
+  margin: 0 auto;
+  /* background-color:yellow;
+  height: 400px; */
+}
+
+.card-overlay-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: #008CBA; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.card-overlay-container:hover .card-overlay  {
+  height: 100%;
+}
+
+.card-overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* <<___(CARD-OVERLAY)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+}
+
+
+/* <<___(CARD-OVERLAY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+}
+
+/* <<___(CARD-OVERLAY)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+}
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> CONTAINER-GALLERY << */
+/* ========================================================================================================================== */
+
+/* <<___(CONTAINER-GALLERY)____________________________________________________________(DESKTOP)___>> */
+
+.row-img { 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column-img {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gallery-box {
+  order: 1;
+  flex-basis: 30%;
+  padding: 1%;
+  height: auto;
+  margin: 1%;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.gallery-img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.3);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.gallery-img:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+/* <<<<< (IMAGE-SIZE) >>>>> */
+img {width: 100%;}
+
+.img1 {width: 500px;}
+
+
+/* <<<<< (IMAGE-POSITION) >>>>> */
+.img-center {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 ;
+}
+
+
+/* <<___(CONTAINER-GALLERY)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+  .column-img {
+    flex: 50%;
+    max-width: 50%;
+  }
+  
+  .gallery-box {
+    flex-basis: 40%;
+  }
+
+  .img-gallery {
+    width: 100%;
+  }
+
+  .img-gallery:hover {
+    width: 100%;
+    transition: none;
+  }
+
+  /* <<<<< (IMAGE-SIZE) >>>>> */
+  .img1 {width: 400px; }
+
+ /* <<<<< (IMAGE-POSITION) >>>>> */
+  .img-center {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 ;
+
+  }
+
+ 
+}
+
+/* <<___(CONTAINER-GALLERY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+  .gallery-box {
+    flex-basis: 100%;
+  }
+
+  .column-img {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  
+  /* <<<<< (IMAGE-SIZE) >>>>> */
+  .img1 {width: 300px; }
+
+  /* <<<<< (IMAGE-POSITION) >>>>> */
+  .img-center {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 ;
+
+  }
+
+
+}
+
+
+/* <<___(CONTAINER-GALLERY)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+
+  /* <<<<< (IMAGE-SIZE) >>>>> */
+  .img1 {width: 200px; }
+
+  /* <<<<< (IMAGE-POSITION) >>>>> */
+  .img-center {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 ;
+
+  }
+
+
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> SLIDESHOW-GALLERY  << */
+/* ========================================================================================================================== */
+
+/* <<___(SLIDESHOW-GALLERY)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< (SLIDESHOW-1) >>>>> */
+
+
+/* <<<<< (SLIDESHOW-2) >>>>> */
+
+
+/* <<___(SLIDESHOW-GALLERY)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+  /* <<<<< (SLIDESHOW-1) >>>>> */
+
+
+  /* <<<<< (SLIDESHOW-2) >>>>> */
+
+}
+
+
+/* <<___(SLIDESHOW-GALLERY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+  /* <<<<< (SLIDESHOW-1) >>>>> */
+
+
+  /* <<<<< (SLIDESHOW-2) >>>>> */
+
+}
+
+/* <<___(SLIDESHOW-GALLERY)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+}
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> FONT-STYLE << */
+/* ========================================================================================================================== */
+
+/* <<___(FONT-STYLE)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< (FONT-SIZE) >>>>> */
+.t16 { font-size: 16px; }
+.t18 { font-size: 18px; }
+.t20 { font-size: 20px; }
+.t25 { font-size: 25px; }
+.t30 { font-size: 30px; }
+.t35 { font-size: 35px; }
+.t40 { font-size: 40px; }
+.t50 { font-size: 50px; }
+.t60 { font-size: 60px; }
+.t70 { font-size: 70px; }
+.t80 { font-size: 80px; }
+.t90 { font-size: 90px; }
+
+
+/* <<<<< (TEXT-ALIGN) >>>>> */
+.tc {text-align: center;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+.tj {text-align: justify;}
+
+.v-top {vertical-align: top; }
+.v-mid {vertical-align: middle; }
+.v-bot {vertical-align: bottom; }
+
+/* <<<<< (FONT-FAMILY) >>>>> */
+.ff1 {font-family: 'Josefin Sans'; }
+
+/* <<<<< (TEXT-SHADOW) >>>>> */
+.t-shadow1 {text-shadow: 1px 2px 5px black; }
+
+/* <<<<< (TEXT-INDENTATION) >>>>> */
+.t-inden {text-indent: 50px; }
+
+
+/* <<___(FONT-STYLE)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+  /* <<<<< (FONT-SIZE) >>>>> */
+  .t90, .t80, .t70, .t60 {font-size: 45px; }
+  .t50, .t40, .t35, .t30 {font-size: 30px; }
+  .t25 {font-size: 20px; }
+  .t20 {font-size: 18px; }
+
+
+
+
+  
+}
+
+
+/* <<___(FONT-STYLE)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+  /* <<<<< (FONT-SIZE) >>>>> */
+  .t90, .t80, .t70, .t60 {font-size: 30px; }
+  .t50, .t40, .t35, .t30 {font-size: 25px; }
+  .t25, .t20, .t18, .t16 {font-size: 16px; }
+
+  /* <<<<< (TEXT-SHADOW) >>>>> */
+  .t-shadow1 {text-shadow: none;}
+
+
+
+
+
+}
+
+/* <<___(FONT-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> TABLE-STYLE  << */
+/* ========================================================================================================================== */
+
+/* <<___(TABLE-STYLE)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< () >>>>> */
+table {
+  width:100%;
+  margin: 16px auto;
+  background-color: red;
+  border: 3px solid black;
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  border: 2px solid black;
+  height: 50px;
+  padding: 16px;
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+  
+
+
+th {
+
+}
+
+td{
+  
+}
+
+
+/* <<___(TABLE-STYLE)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+ 
+
+}
+
+
+/* <<___(TABLE-STYLE)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+  table {
+     border: 1px;
+  }
+
+  th, td {
+    display: block;
+  }
+
+
+}
+
+/* <<___(TABLE-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+
+
+
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> COLOR / BACKGROUND  << */
+/* ========================================================================================================================== */
+
+/* <<___(COLOR / BACKGROUND)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< (TEXT-COLOR) >>>>> */
+.t-color1 {color: #eee;}
+.t-color2 {color: #303841;}
+.t-color3 {color: #303841;}
+.t-color4 {color: #303841;}
+
+/* <<<<< (BACKGROUND-COLOR) >>>>> */
+.b-color1 {background-color: #eee;}
+.b-color2 {background-color: #303841;}
+.b-color3 {background-color: #eeecda;}
+.b-color4 {background-color: #f08a5d;}
+.b-color5 {background-color: #b83b5e;}
+.b-color6 {background-color: #6a2c70;}
+
+/* <<<<< (BACKGROUND-COLOR-GRADIENT) >>>>> */
+.g-color1 { background-image: linear-gradient(to right top, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);}
+
+
+
+/* <<___(COLOR / BACKGROUND)________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+}
+
+
+/* <<___(COLOR / BACKGROUND)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>   << */
+/* ========================================================================================================================== */
+
+/* <<___()________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< () >>>>> */
+
+/* <<___()________________________________________________________________(TABLET)___>> */
+@media (max-width: 1199px) { 
+
+}
+
+
+/* <<___()________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 768px) { 
+
+}
+
+/* <<___()________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { 
+
+}
+

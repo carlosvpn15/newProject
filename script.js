@@ -35,3 +35,21 @@ $(function() {
     })
 });
 
+
+
+//CARD EXPANDER FX
+const panels = document.querySelectorAll('.card-ex-panel') 
+
+panels.forEach((panel) => {
+    panel.addEventListener('click', () => { 
+        removeAtiveClasses()
+        panel.classList.add('active-ex')
+    })
+
+})
+
+function  removeAtiveClasses() {
+    panels.forEach(panel => {
+        panel.classList.remove('active-ex')
+    })
+}
