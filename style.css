@@ -246,13 +246,10 @@ a {
 
 /* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(DESKTOP)___>> */
 
-main, section {
+main, section,header  {
 	height: auto;
 }
 
-header {
-  height: 100vh;
-}
 
 /* <<<<< (CONTAINER) >>>>> */
 .container-f, .container-m, .container-s, .container-c {
