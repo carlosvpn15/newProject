@@ -773,8 +773,12 @@ footer {
 /* <<___(CARD-EXPANDER)________________________________________________________________(TABLET-PORTRAIT)___>> */
 @media (max-width: 768px) { 
 
+  .card-ex-container {
+     height: 65vh;  
+  }
+
   .card-ex-panel {
-    height: 85vh;
+    height: 60vh;
     border-radius: 0;
     width: 10%;
     margin: 5px;
