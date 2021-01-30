@@ -697,6 +697,8 @@ footer {
      position: absolute;
      bottom: 20px;
      left: 20px;
+     background-color: white;
+     color: black;
 }
 
 .card-ex-btn:hover {
