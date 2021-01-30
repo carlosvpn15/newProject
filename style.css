@@ -598,7 +598,7 @@ footer {
 
   /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
   .parallax-b-img {
-    height: 700px;
+    height:100vh;
   }
 
 
@@ -624,7 +624,7 @@ footer {
 
    /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
    .parallax-b-img {
-     height: 600px;
+     height: 700px;
   }
 
 
