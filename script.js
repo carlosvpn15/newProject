@@ -1,13 +1,17 @@
 
 //TO CHANGE THE STYLE OF THE NAVBAR ON SCROL
+$(function() {
+    var header = $('#navbar1');
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
 
-// $(window).scroll(function () {
-//     if ($(window).scrollTop() >= 150) {
-//     $('#navbar1').css('display','none');
-//     } else {
-//     $('#navbar1').css('display','block');
-//     }
-//     });
+        if (scroll >= 200) {
+            header.removeClass('nav-scroll-up').addClass("nav-scroll-down");
+        } else {
+            header.removeClass("nav-scroll-down").addClass('nav-scroll-up');
+        }
+    });
+});
 
 
 //TO HIDE OR SHOW THE NAVBAR ON MOBILE
@@ -41,11 +45,10 @@ $(function() {
 const panels = document.querySelectorAll('.card-ex-panel') 
 
 panels.forEach((panel) => {
-    panel.addEventListener('touchstart', () => { 
+    panel.addEventListener('click', () => { 
         removeAtiveClasses()
         panel.classList.add('active-ex')
     })
-
 })
 
 function  removeAtiveClasses() {
@@ -53,22 +56,5 @@ function  removeAtiveClasses() {
         panel.classList.remove('active-ex')
     })
 }
-
-// ON MOBILE 2
-// const panels = document.querySelectorAll('.card-ex-panel') 
-
-// panels.forEach((panel) => {
-//     panel.addEventListener('touchstart', () => { 
-//         removeAtiveClasses()
-//         panel.classList.add('active-ex')
-//     })
-
-// })
-
-// function  removeAtiveClasses() {
-//     panels.forEach(panel => {
-//         panel.classList.remove('active-ex')
-//     })
-// }
 
 

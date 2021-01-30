@@ -30,7 +30,7 @@
 
 /* <<<<< (NAVBAR-CONTAINER) >>>>> */
 nav {
-	background-color: black;
+	background-color: rgb(19, 18, 18);
   padding: 5px 20px;
   position: fixed;
   width: 100%;
@@ -125,7 +125,8 @@ a {
 		order:1;
 	}
   
-  .logo {flex:1;}
+  .logo {flex:0.9; 
+  }
 
   /* <<<<< (NAVBAR-BTN) >>>>> */
   .btn-nav-second {
@@ -160,34 +161,11 @@ a {
 
 	.toggle {
     order: 2;
-    /* margin-right: 10px; */
+    margin-left: 8px;
+  
   }
     
-	/* .btn a {
-		padding: 7px 15px;
-		background: teal;
-		border: 1px solid #006d6d;
-		border-radius: 50em;
-		text-decoration: none;
-	} */
 
-	/* .btn.second a {
-		background: transparent;
-	}
-
-	.btn.second a:hover {
-		background: transparent;
-	} */
-
-	/* .btn:not(.second) a:hover {
-		background: #006d6d;
-		border-color: #005959;
-	}
-
-	.btn a:hover {
-		color: #ddd;
-	}
-	 */
 }
 
 /* <<___(NAV-BAR)________________________________________________________________(DESKTOP)___>> */
@@ -198,10 +176,30 @@ a {
   nav {
     background-color: transparent;
     padding: 40px;
-    position: static;
+    position: fixed;
     width:100%;
     margin: 0 auto;
   } 
+
+  .nav-scroll-up {
+    background-color: transparent;
+    padding: 40px;
+    position: fixed;
+    width:100%;
+    margin: 0 auto;
+    transition: all 0.5s;
+  }
+
+  .nav-scroll-down {
+    background-color: black;
+    padding: 15px;
+    position: fixed;
+    width:100%;
+    margin: 0 auto;
+    transition: all 0.5s;
+  }
+
+
 
 	.item {
 		display: block; 
@@ -236,7 +234,7 @@ a {
   }
 
   .btn-nav:hover {
-    border: solid black  2px;
+    border: solid orange 2px;
     background-color: orange;
     color: rgb(34, 29, 29);
   }
@@ -695,7 +693,6 @@ footer {
   cursor: pointer;
   width: 10%;
   background-size: auto 100%;
-  position: relative;
   padding: 16px;
   margin: 10px;
   transition: width 0.7s ease-in-out;
@@ -721,26 +718,27 @@ footer {
   background-position: center;
 }
 
+.card-ex-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
 
 .card-ex-text {
   font-size: 24px;
-  position: absolute;
-  bottom: 70px;
-  left: 20px;
   margin: 0;
   opacity: 0;
+  margin-bottom: 10px;
 }
-
 
 .card-ex-btn {
   opacity: 0;
-  padding: 10px 20%;
+  padding: 10px;
   border-radius: 10px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
   background-color: white;
   color: black;
+  width: 150px;
 }
 
 .card-ex-btn:hover {
