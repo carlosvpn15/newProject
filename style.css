@@ -350,7 +350,7 @@ footer {
 }
 
 
-/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(TABLET)___>> */
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(TABLET-LANDSCAPE)___>> */
 
 @media (max-width: 1199px) { 
 	
@@ -383,10 +383,18 @@ footer {
   .col3 {
     flex-basis: 48%;
   }
+
+
+  header {
+    height: 1500px;
+
+  }
+
+
   
 }
 
-/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(MOBILE-LANDSCAPE)___>> */
+/* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(TABLET-PORTRAIT)___>> */
 
 @media (max-width: 768px) { 
 
@@ -397,6 +405,8 @@ footer {
   }
 
   .container-f, .container-m, .container-s { width: 100%; }
+
+
   
   /* <<<<< (GRID-LAYOUT) >>>>> */
   .row {
@@ -424,6 +434,13 @@ footer {
 
 }
 
+/* <<___()________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { 
+ 
+}
+
+
+
 /* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(MOBILE-PORTRAIT)___>> */
 
 @media (max-width: 400px) { 
@@ -434,6 +451,7 @@ footer {
     padding: 0 15px;
    
   }
+
 
  
 }
@@ -484,11 +502,6 @@ footer {
 .left { order: 1; }
 .right { order: 2; }
 
-/* .fa-crosshairs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-} */
 
 /* <<___(SIDE-2-SIDE-BOX)____________________________________________________________(TABLET)___>> */
 @media (max-width: 1199px) {
@@ -556,15 +569,15 @@ footer {
 
 
 
-/* <<___(PARALLAX)____________________________________________________________(TABLET)___>> */
+/* <<___(PARALLAX)____________________________________________________________(TABLET-LANDSCAPE)___>> */
 @media (max-width: 1199px) {
   
-  /* <<<<< (PARALLAX-BACKGROUND) >>>>> */
+  /* <<<<< (PARALLAX-CONTAINER-FX) >>>>> */
   .parallax-text {
     padding: 18% 10%;
   }
   
-  /* <<<<< (PARALLAX-BACKGROUND-HERO) >>>>> */
+  /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
   .parallax-b-img {
     background-attachment: scroll;
     width: 100%;
@@ -575,22 +588,43 @@ footer {
 
 }
 
-/* <<___(PARALLAX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+/* <<___(PARALLAX)________________________________________________________________(TABLET-PORTRAIT)___>> */
 @media (max-width: 768px) { 
  
-  /* <<<<< (PARALLAX-BACKGROUND) >>>>> */
+  /* <<<<< (PARALLAX-CONTAINER-FX) >>>>> */
   .parallax-text {
     padding: 30% 10%;
+  }
+
+  /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
+  .parallax-b-img {
+    height: 700px;
   }
 
 
 
 }
 
+
+/* <<___(PARALLAX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { 
+
+
+
+}
+
+
+
+
 /* <<___(PARALLAX)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { 
   .parallax-text {
     padding: 50% 10%;
+  }
+
+   /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
+   .parallax-b-img {
+     height: 600px;
   }
 
 
