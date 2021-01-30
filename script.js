@@ -41,7 +41,7 @@ $(function() {
 const panels = document.querySelectorAll('.card-ex-panel') 
 
 panels.forEach((panel) => {
-    panel.addEventListener('click', () => { 
+    panel.addEventListener('touchstart', () => { 
         removeAtiveClasses()
         panel.classList.add('active-ex')
     })
@@ -53,3 +53,22 @@ function  removeAtiveClasses() {
         panel.classList.remove('active-ex')
     })
 }
+
+// ON MOBILE 2
+// const panels = document.querySelectorAll('.card-ex-panel') 
+
+// panels.forEach((panel) => {
+//     panel.addEventListener('touchstart', () => { 
+//         removeAtiveClasses()
+//         panel.classList.add('active-ex')
+//     })
+
+// })
+
+// function  removeAtiveClasses() {
+//     panels.forEach(panel => {
+//         panel.classList.remove('active-ex')
+//     })
+// }
+
+
