@@ -142,7 +142,7 @@ a {
   }
 
   .btn-nav-second2 {
-    padding: 7px 15px;
+    padding: 10px 25px;
 		background:transparent;
 		border: 1px solid rgb(230, 178, 9);
 		border-radius: 8px;
@@ -733,14 +733,14 @@ footer {
 
 
 .card-ex-btn {
-     opacity: 0;
-     padding: 10px 20%;
-     border-radius: 10px;
-     position: absolute;
-     bottom: 20px;
-     left: 20px;
-     background-color: white;
-     color: black;
+  opacity: 0;
+  padding: 10px 20%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  color: black;
 }
 
 .card-ex-btn:hover {
