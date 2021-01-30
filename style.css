@@ -163,8 +163,6 @@ a {
     /* margin-right: 10px; */
   }
     
-
-
 	/* .btn a {
 		padding: 7px 15px;
 		background: teal;
@@ -307,7 +305,7 @@ footer {
   padding: 15px;
   margin-bottom: 15px;
   height: auto;
-  border: black solid 1px; 
+  /* border: black solid 1px;  */
 }
 
 .col3 {
@@ -315,7 +313,7 @@ footer {
   padding: 15px;
   margin-bottom: 15px;
   height: auto;
-  border: black solid 1px;
+  /* border: black solid 1px; */
 }
 
 .col4 {
@@ -323,7 +321,7 @@ footer {
   padding: 15px;
   margin-bottom: 15px;
   height: auto;
-  border: black solid 1px;
+  /* border: black solid 1px; */
 }
 
 /* <<<<< (CONTAINER-HEADER) >>>>> */
@@ -727,7 +725,7 @@ footer {
 .card-ex-text {
   font-size: 24px;
   position: absolute;
-  bottom: 60px;
+  bottom: 70px;
   left: 20px;
   margin: 0;
   opacity: 0;
@@ -786,8 +784,6 @@ footer {
 
 }
 
-
-
 /* <<___(CARD-EXPANDER)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
 @media (max-width: 600px) { 
 
@@ -798,8 +794,6 @@ footer {
 
 
 }
-
-
 
 
 /* <<___(CARD-EXPANDER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
@@ -818,15 +812,16 @@ footer {
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >> CARD-OVERLAY << */
+/* >> CARD-IMG-OVERLAY << */
 /* ========================================================================================================================== */
 
-/* <<___(CARD-OVERLAY)________________________________________________________________(DESKTOP)___>> */
+/* <<___(CARD-IMG-OVERLAY )________________________________________________________________(DESKTOP)___>> */
 .card-overlay-container {
   position: relative;
   width:100%;
   margin: 0 auto;
-  /* background-color:yellow;
+  border: 10px solid rgb(235, 235, 235);
+ /* background-color:yellow;
   height: 400px; */
 }
 
@@ -836,7 +831,7 @@ footer {
   height: auto;
 }
 
-.card-overlay {
+.card-overlay-fx {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -849,7 +844,7 @@ footer {
   transition: .5s ease;
 }
 
-.card-overlay-container:hover .card-overlay  {
+.card-overlay-container:hover .card-overlay-fx  {
   height: 100%;
 }
 
@@ -865,18 +860,23 @@ footer {
   text-align: center;
 }
 
-/* <<___(CARD-OVERLAY)________________________________________________________________(TABLET)___>> */
+/* <<___(CARD-IMG-OVERLAY)________________________________________________________________(TABLET-LANDSCAPE)___>> */
 @media (max-width: 1199px) { 
 
 }
 
 
-/* <<___(CARD-OVERLAY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+/* <<___(CARD-IMG-OVERLAY)________________________________________________________________(TABLET-PORTRAIT)___>> */
 @media (max-width: 768px) { 
 
 }
 
-/* <<___(CARD-OVERLAY)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+/* <<___(CARD-IMG-OVERLAY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { 
+
+}
+
+/* <<___(CARD-IMG-OVERLAY)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { 
 
 }
