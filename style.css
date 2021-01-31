@@ -19,8 +19,16 @@
     scroll-behavior: smooth;
   }
   
-  .space {padding-bottom: 110px;}
+  .space1 {padding-bottom: 110px;}
+  .space2 {padding-bottom: 20px;}
 
+  .divition {
+    width: 50%;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> NAV-BAR << */
@@ -225,16 +233,17 @@ a {
   
   /* <<<<< (NAVBAR-BTN) >>>>> */
   .btn-nav {
-    border: 2px white solid;
+    border: 1px white solid;
     margin-left: 10px;
     font-size: 16px;
     padding: 10px 25px;
   }
 
   .btn-nav:hover {
-    border: solid orange 2px;
+    border: solid orange 1px;
     background-color: orange;
     color: rgb(34, 29, 29);
+    transition: all 0.5s;
   }
 
 }
@@ -246,10 +255,9 @@ a {
 
 /* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(DESKTOP)___>> */
 
-main, section,header  {
+main, section {
 	height: auto;
 }
-
 
 /* <<<<< (CONTAINER) >>>>> */
 .container-f, .container-m, .container-s, .container-c {
@@ -257,7 +265,6 @@ main, section,header  {
   padding: 40px;
   margin: 0 auto;
 }
-
 
 .container-f { width: 100%; }
 .container-m { width: 90%;  }
@@ -270,12 +277,21 @@ main, section,header  {
   align-items: flex-start;
   width: 100%;
   height: 400px;
- }
-
-footer {
-  height: 300px;
-  padding: 20px;
 }
+
+header {
+  height: 800px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 80vh;
+  padding: 16px;
+}
+
 
 /* <<<<< (GRID-LAYOUT) >>>>> */
 .row {
@@ -360,6 +376,16 @@ footer {
   .container-f { width: 100%; }
   .container-m { width: 90%;  }
   .container-s { width: 90%;  }
+
+  .header-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 80vh;
+    padding: 16px;
+  }
+  
   
   /* <<<<< (GRID-LAYOUT) >>>>> */
   .row {
@@ -399,8 +425,6 @@ footer {
 
   .container-f, .container-m, .container-s { width: 100%; }
 
-
-  
   /* <<<<< (GRID-LAYOUT) >>>>> */
   .row {
     flex-flow: row wrap;
@@ -427,12 +451,10 @@ footer {
 
 }
 
-/* <<___()________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+/* <<___(GRID-LAYOUT | CONTAINER)_____________________________________________________________(MOBILE-LANDSCAPE)___>> */
 @media (max-width: 600px) { 
  
 }
-
-
 
 /* <<___(GRID-LAYOUT | CONTAINER)____________________________________________________________(MOBILE-PORTRAIT)___>> */
 
@@ -450,9 +472,78 @@ footer {
 }
 
 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> FOOTER  << */
+/* ========================================================================================================================== */
+
+/* <<___(FOOTER)________________________________________________________________(DESKTOP)___>> */
+
+footer {
+  height: 400px;
+  background-color: #303841;
+  /* padding: 50px; */
+}
+
+.icon-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  margin: 2px auto;
+  padding: 40px 16px;
+}
+
+.icon-footer-link {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+.icon-footer-link:hover {
+  color: #aaa;
+}
+
+.fa-arrow-up:hover {
+  color: #aaa;
+}
+
+.info-footer {
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+  height: 150px;
+}
 
 
+/* <<___(FOOTER)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { 
+  .icon-footer {
+    width: 30%;
+  }
 
+  footer {
+    height: 400px;
+    background-color: #303841;
+  }
+}
+
+/* <<___(FOOTER)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+
+/* <<___(FOOTER)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { 
+  .icon-footer {
+    width: 45%;
+  }
+  footer {
+    height: 400px;
+  }
+}
+
+/* <<___(FOOTER)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -475,10 +566,10 @@ footer {
   flex-basis: 50%;
   background-color: #eee;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(fondo.jpg); */
-  background-image: url(fondo.jpg);
+  /* background-image: url(fondo.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: cover; */
   height: 700px;
   background-attachment: scroll;
 }
@@ -601,18 +692,7 @@ footer {
 /* <<___(PARALLAX)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
 @media (max-width: 600px) { 
 
-     /* <<<<< (PARALLAX-BACKGROUND-IMAGE) >>>>> */
-     .parallax-b-img {
-      height: 700px;
-   }
- 
-
-
-
 }
-
-
-
 
 /* <<___(PARALLAX)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { 
@@ -1043,11 +1123,6 @@ img {width: 100%;}
 /* <<___(CONTAINER-GALLERY)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
 @media (max-width: 600px) { 
 
-
-
-
-
-
 }
 
 
@@ -1267,6 +1342,345 @@ td{
 
 
 
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> FORM-STYLE  << */
+/* ========================================================================================================================== */
+
+/* <<___(FORM-STYLE)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< (FORM-CONTAINER) >>>>> */
+.f-container {
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+
+
+/* <<<<< (INPUT-STYLE) >>>>> */
+input[type=text], input[type=email], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  transition: border .5s, background 0.8s;
+}
+
+input[type=text]:hover {
+  border: 1px red solid;
+  background-color: #e0dfdf;
+}
+
+input[type=email]:hover {
+  border: 1px red solid;
+  background-color: #e0dfdf;
+}
+
+input[type=number]:hover {
+  border: 1px red solid;
+}
+
+select:hover {
+  border: 1px red solid;
+}
+
+textarea:hover {
+  border: 1px red solid;
+  background-color: #e0dfdf;
+}
+
+/* <<<<< (SUBMIT-BTN) >>>>> */
+input[type=submit] {
+  background-color: #4CAF50;
+  background: -webkit-linear-gradient(to left, #f12715, #f5ad00);
+  background: linear-gradient(to left, #f12715, #f5ad00);
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* <<<<< (SUBMIT-BTN-HOVER) >>>>> */
+input[type=submit]:hover {
+  background: #f12711;
+  background: -webkit-linear-gradient(to left, #f5ad00, #f12715);
+  background: linear-gradient(to left, #f5ad00, #f12700);
+  color: white;
+  border-bottom: 2px #2F2F2F solid;
+}
+
+
+/* <<___(FORM-STYLE)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) {
+  
+  /* <<<<< (FORM-CONTAINER) >>>>> */
+  .f-container {
+    padding: 20px;
+    width: 90%;
+    margin: 3% auto;
+  }
+
+ }
+
+/* <<___(FORM-STYLE)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+/* <<___(FORM-STYLE)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { 
+
+  /* <<<<< (SUBMIT-BTN) >>>>> */
+  input[type=submit] {
+    padding: 16px 45%;
+    margin: 0 1%;
+    display: inline-block;
+  }
+}
+
+/* <<___(FORM-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> LOGIN-FORM  << */
+/* ========================================================================================================================== */
+
+/* <<___(LOGIN-FORM)________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< () >>>>> */
+
+
+
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  box-sizing: border-box;
+	}
+	
+	/* Set a style for all buttons */
+	button {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	}
+	
+	button:hover {
+	  opacity: 0.8;
+	}
+	
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+	  width: auto;
+	  padding: 10px 18px;
+	  background-color: #f44336;
+	}
+	
+	/* Center the image and position the close button */
+	.imgcontainer {
+	  text-align: center;
+	  margin: 24px 0 12px 0;
+	  position: relative;
+	}
+	
+	img.avatar {
+	  width: 20%;
+	  border-radius: 50%;
+	}
+	
+	.container {
+	  padding: 16px;
+	}
+	
+	span.psw {
+	  float: right;
+	  padding-top: 16px;
+	}
+	
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	  padding-top: 60px;
+	}
+	
+	/* Modal Content/Box */
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	  border: 1px solid #888;
+	  width: 50%; /* Could be more or less, depending on screen size */
+	}
+	
+	/* The Close Button (x) */
+	.close {
+	  position: absolute;
+	  right: 25px;
+	  top: 0;
+	  color: #000;
+	  font-size: 35px;
+	  font-weight: bold;
+	}
+	
+	.close:hover,
+	.close:focus {
+	  color: red;
+	  cursor: pointer;
+	}
+	
+	/* Add Zoom Animation */
+	.animate {
+	  -webkit-animation: animatezoom 0.6s;
+	  animation: animatezoom 0.6s
+	}
+	
+	@-webkit-keyframes animatezoom {
+	  from {-webkit-transform: scale(0)} 
+	  to {-webkit-transform: scale(1)}
+	}
+	  
+	@keyframes animatezoom {
+	  from {transform: scale(0)} 
+	  to {transform: scale(1)}
+	}
+	
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+	  span.psw {
+		 display: block;
+		 float: none;
+	  }
+	  .cancelbtn {
+		 width: 100%;
+	  }
+	}
+
+
+/* <<___(LOGIN-FORM)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { }
+
+/* <<___(LOGIN-FORM)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+/* <<___(LOGIN-FORM)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { }
+
+/* <<___(LOGIN-FORM)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> SIGN-FORM  << */
+/* ========================================================================================================================== */
+
+/* <<___(SIGN-FORM )________________________________________________________________(DESKTOP)___>> */
+
+/* <<<<< () >>>>> */
+
+
+/* <<___(SIGN-FORM )________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { }
+
+/* <<___(SIGN-FORM )________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+/* <<___(SIGN-FORM )________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { }
+
+/* <<___(SIGN-FORM )________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>  BUTTON-STYLE << */
+/* ========================================================================================================================== */
+
+/* <<___(BUTTON-STYLE)________________________________________________________________(DESKTOP)___>> */
+
+.btn-link {
+  padding: 15px 30px;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.btn-link:hover {
+  color: white;
+  background-color: black;
+  transition: background .3s;
+}
+
+.btn-link-w {
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.btn-link-w:hover {
+  color: black;
+  border: 1px solid white;
+  background-color: white;
+  transition: background .3s;
+}
+
+
+
+/* <<___(BUTTON-STYLE)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { }
+
+/* <<___(BUTTON-STYLE)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+/* <<___(BUTTON-STYLE)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { }
+
+/* <<___(BUTTON-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
+
+
+
+
+
+
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> COLOR / BACKGROUND  << */
 /* ========================================================================================================================== */
@@ -1290,18 +1704,24 @@ td{
 /* <<<<< (BACKGROUND-COLOR-GRADIENT) >>>>> */
 .g-color1 { background-image: linear-gradient(to right top, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);}
 
+/* <<<<< (BACKGROUND-IMG) >>>>> */
+
+.b-img1 {
+  background-image: url(fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
 
 
 /* <<___(COLOR / BACKGROUND)________________________________________________________________(TABLET-LANDSCAPE)___>> */
-@media (max-width: 1199px) { 
-
-}
+@media (max-width: 1199px) { }
 
 
 /* <<___(COLOR / BACKGROUND)________________________________________________________________(TABLET-PORTRAIT)___>> */
-@media (max-width: 768px) { 
-
-}
+@media (max-width: 768px) { }
 
 
 
@@ -1336,25 +1756,17 @@ td{
 
 /* <<<<< () >>>>> */
 
+
 /* <<___()________________________________________________________________(TABLET-LANDSCAPE)___>> */
-@media (max-width: 1199px) { 
-
-}
-
+@media (max-width: 1199px) { }
 
 /* <<___()________________________________________________________________(TABLET-PORTRAIT)___>> */
-@media (max-width: 768px) { 
-
-}
+@media (max-width: 768px) { }
 
 /* <<___()________________________________________________________________(MOBILE-LANDSCAPE)___>> */
-@media (max-width: 600px) { 
-
-}
-
+@media (max-width: 600px) { }
 
 /* <<___()________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 400px) { 
+@media (max-width: 400px) { }
 
-}
 

@@ -39,7 +39,7 @@
 				<li class="item"><a href="#" class="btn-nav">Service</a></li>
 				<li class="item"><a href="#" class="btn-nav">About</a></li>
 				<li class="item btn"><a href="#" class="btn-nav-second">Sign Up</a></li>
-				<li class="item btn"><a href="#" class="btn-nav-second2">Login</a></li>	
+				<li class="item btn"><a href="#" class="btn-nav-second2" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>	
 				<li class="toggle"><span class="fas fa-bars"></span></li>
 			</ul>
 		</nav>
@@ -204,9 +204,9 @@
 	====================================================================================-->
 	<section>
 		<div class="side-box-container">
-			<div class="side-box-img left "> </div>
+			<div class="side-box-img left b-img1"> </div>
 
-			<div class="side-box-text right">
+			<div class="side-box-text right ">
 
 				<i class="fas fa-crosshairs fa-4x t-color2"></i>
 			
@@ -285,7 +285,7 @@
 	<section>
 		<div class="side-box-container">
 			
-			<div class="side-box-img right"> </div>
+			<div class="side-box-img right b-img1"> </div>
 
 			<div class="side-box-text left">
 		
@@ -489,44 +489,72 @@
 	<!-- >> PAGE 1 / SECTION 10 =  FORM
 	====================================================================================-->
 	<section>
+		<div class="side-box-container">
+			<!-- 1 -->	
+			<div class="side-box-img right b-img1"></div>
+			
+			<!-- 2 -->
+			<div class="side-box-text left">			
+				<i class="fas fa-crosshairs fa-4x t-color2"></i>		
+				<h1 class="t35 tc t-color2 ff1">Let's Talk!</h1>	
+				<p class="t16 tc">info@visionaudiofilm.com </p>
+				<p class="t16 tc"> Paterson, NJ 07522 </p>
+				<div class="f-container">
+					<form action="mail.php" method="post">
+						<label for="fname"> Your Name </label>
+						<input type="text" id="fname" name="name" placeholder="Enter your name..">
 
-		<div class="paralax-container">
-	
-		  <div class="paralax-box3"></div>
-	
-		  <div class="paralax-box4 b-color2">
-	
-			<div class="container-center">
-			  <i class="fas fa-crosshairs fa-4x t-color2 icon-s"></i>
+						<label for="email1"> Email Address </label>
+						<input type="email" id="email1" name="email" placeholder="Enter your email..">
+
+						<label for="subject"> Your Message </label>
+						<textarea id="subject" name="msg" placeholder="How we can help you.." style="height:auto"></textarea>
+
+						<input type="submit" value="Send">
+					</form>
+				</div>
 			</div>
-			<br>
-	
-			<h1 class="t35 tc t-color2 ff1">Let's Talk!</h1>
-	
-			<br>
-			<div class="container-center">
-			  <p class="t16 tc">info@visionaudiofilm.com </p> <br class="m5">
-			  <p class="t16 tc"> Paterson, NJ 07522 </p>
-			</div>
-	
-			<div class="f-container">
-			  <form action="mail.php" method="post">
-	
-				<label for="fname"> Your Name </label>
-				<input type="text" id="fname" name="name" placeholder="Enter your name..">
-	
-				<label for="email1"> Email Address </label>
-				<input type="email" id="email1" name="email" placeholder="Enter your email..">
-	
-				<label for="subject"> Your Message </label>
-				<textarea id="subject" name="msg" placeholder="How we can help you.." style="height:100px"></textarea>
-	
-				<input type="submit" value="Send">
-			  </form>
-			</div>
-		  </div>
 		</div>
-	  </section>
+	</section>
+
+
+	<!-- >> PAGE 1 / SECTION 11 =  LOGIN
+	====================================================================================-->
+	
+	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php" method="post">
+		<div class="imgcontainer">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		  <img src="logo.png" alt="Avatar" class="avatar">
+		</div>
+	
+		<div class="container">
+		  <label for="uname"><b>Username</b></label>
+		  <input type="text" placeholder="Enter Username" name="uname" required>
+	
+		  <label for="psw"><b>Password</b></label>
+		  <input type="password" placeholder="Enter Password" name="psw" required>
+			
+		  <button type="submit">Login</button>
+		  <label>
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		  </label>
+		</div>
+	
+		<div class="container" style="background-color:#f1f1f1">
+		  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		  <span class="psw">Forgot <a href="#">password?</a></span>
+		</div>
+	  </form>
+	</div>
+
+	<!-- >> PAGE 1 / SECTION 12 =  SIGN
+	====================================================================================-->
+
+
+
+
 
 
 	<!-- >> PAGE 1 = FOOTER
