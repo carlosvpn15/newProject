@@ -579,6 +579,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 8% 8%;
+  height: 700px;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -590,10 +591,10 @@ footer {
 /* <<___(SIDE-2-SIDE-BOX)____________________________________________________________(TABLET)___>> */
 @media (max-width: 1199px) {
   
-  .side-box-container {
+  /* .side-box-container {
     height:700px;
     align-content: flex-start;
-  }
+  } */
 
 
 }
@@ -605,7 +606,7 @@ footer {
   .side-box-container {
     height: 950px;
     align-content: flex-start;
-    margin-bottom: 7%;
+    margin-bottom: 50px;
   }
 
   .side-box-img, .side-box-text  {
@@ -1673,6 +1674,50 @@ input[type=submit]:hover {
 
 /* <<___(BUTTON-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> SHOW-CONTENT-ON-SCROLL  << */
+/* ========================================================================================================================== */
+
+/* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(DESKTOP)___>> */
+.display-content {
+  /* transform: translatex(400%); */
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* .display-content:nth-of-type(even) {
+  transform: translatex(-400%);
+} */
+
+.display-content.show {
+  /* transform: translatex(0); */
+  opacity: 1;
+}
+
+
+/* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { }
+
+/* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { 
+  .display-content {
+    opacity: 1;
+  }
+}
+
+/* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { }
+
+/* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
+
+
+
+
+
+
 
 
 

@@ -66,4 +66,25 @@ function  removeAtiveClasses() {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
-	}
+    }
+    
+// SHOW CONTENT ON SCROLL
+const boxes = document.querySelectorAll('.display-content');
+
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes()
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        } 
+    })
+}
