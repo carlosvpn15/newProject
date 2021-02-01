@@ -310,7 +310,7 @@ header {
   width: 48%;
   padding: 15px;
   margin-bottom: 15px;
-  height: auto;
+  height: 100%;
   /* border: black solid 1px;  */
 }
 
@@ -1267,13 +1267,12 @@ img {width: 100%;}
 }
 
 /* <<___(FONT-STYLE)________________________________________________________________(MOBILE-PORTRAIT)___>> */
-@media (max-width: 400px) { 
+@media (max-width: 400px) { }
 
 
 
 
 
-}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> TABLE-STYLE  << */
@@ -1452,6 +1451,8 @@ input[type=submit]:hover {
 
 
 
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> LOGIN-FORM  << */
 /* ========================================================================================================================== */
@@ -1595,6 +1596,12 @@ input[type=submit]:hover {
 @media (max-width: 400px) { }
 
 
+
+
+
+
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> SIGN-FORM  << */
 /* ========================================================================================================================== */
@@ -1620,6 +1627,8 @@ input[type=submit]:hover {
 
 
 
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >>  BUTTON-STYLE << */
 /* ========================================================================================================================== */
@@ -1635,6 +1644,7 @@ input[type=submit]:hover {
   font-size: 16px;
   margin-bottom: 5px;
   text-align: center;
+  z-index: 1;
 }
 
 .btn-link:hover {
@@ -1652,6 +1662,7 @@ input[type=submit]:hover {
   font-size: 16px;
   margin-bottom: 5px;
   text-align: center;
+  z-index: 1;
 }
 
 .btn-link-w:hover {
@@ -1676,6 +1687,11 @@ input[type=submit]:hover {
 @media (max-width: 400px) { }
 
 
+
+
+
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* >> SHOW-CONTENT-ON-SCROLL  << */
 /* ========================================================================================================================== */
@@ -1684,7 +1700,7 @@ input[type=submit]:hover {
 .display-content {
   /* transform: translatex(400%); */
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 /* .display-content:nth-of-type(even) {
@@ -1717,6 +1733,84 @@ input[type=submit]:hover {
 
 
 
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >> SPLIT-SCREEN << */
+/* ========================================================================================================================== */
+
+/* <<___(SPLIT-SCREEN)________________________________________________________________(DESKTOP)___>> */
+
+.split-screen-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.screen-left {
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(pizza8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.split.screen-right {
+  right: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(pizza12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hover-left .screen-left   {width: 75%; }
+.hover-left .screen-right  {width: 25%; }
+.hover-right .screen-right {width: 75%; }
+.hover-right .screen-left  {width: 25%; }
+
+.split.screen-right, .split.screen-left {
+  transition: all .9s ease-in;
+}
+
+
+.screen-text {
+  color: white; 
+  text-shadow: 2px 2px 2px black;
+  font-size: 40px;
+  z-index: 1;
+  margin: 10px;
+}
+
+
+
+/* <<___(SPLIT-SCREEN)________________________________________________________________(TABLET-LANDSCAPE)___>> */
+@media (max-width: 1199px) { }
+
+/* <<___(SPLIT-SCREEN)________________________________________________________________(TABLET-PORTRAIT)___>> */
+@media (max-width: 768px) { }
+
+/* <<___(SPLIT-SCREEN)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+@media (max-width: 600px) { }
+
+/* <<___(SPLIT-SCREEN)________________________________________________________________(MOBILE-PORTRAIT)___>> */
+@media (max-width: 400px) { }
 
 
 

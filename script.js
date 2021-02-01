@@ -1,5 +1,6 @@
-
-//TO CHANGE THE STYLE OF THE NAVBAR ON SCROL
+ 
+ // -----------------------------------------------------------------------
+// TO CHANGE THE STYLE OF THE NAVBAR ON SCROL
 $(function() {
     var header = $('#navbar1');
     $(window).scroll(function() {    
@@ -14,7 +15,9 @@ $(function() {
 });
 
 
-//TO HIDE OR SHOW THE NAVBAR ON MOBILE
+
+ // -----------------------------------------------------------------------
+// TO HIDE OR SHOW THE NAVBAR ON MOBILE
 $(function() {
     $(".toggle").on("click", function (){
         if($(".item").hasClass("active")) {
@@ -26,8 +29,8 @@ $(function() {
     })
 });
 
-
-//TO CHANGE MOBILE-NAVBAR-ICON ON CLICK
+ // -----------------------------------------------------------------------
+// TO CHANGE MOBILE-NAVBAR-ICON ON CLICK
 $(function() {
     $(".toggle").on("click", function (){
         if($(".toggle span").hasClass("fa-bars")) {
@@ -40,8 +43,8 @@ $(function() {
 });
 
 
-
-//CARD EXPANDER FX
+ // -----------------------------------------------------------------------
+// CARD EXPANDER FX
 const panels = document.querySelectorAll('.card-ex-panel') 
 
 panels.forEach((panel) => {
@@ -67,7 +70,8 @@ function  removeAtiveClasses() {
 			modal.style.display = "none";
 		}
     }
-    
+
+ // -----------------------------------------------------------------------   
 // SHOW CONTENT ON SCROLL
 const boxes = document.querySelectorAll('.display-content');
 
@@ -88,3 +92,17 @@ function checkBoxes() {
         } 
     })
 }
+
+
+// -----------------------------------------------------------------------
+// SPLIT-SCREEN-CONTAINER
+const left = document.querySelector('.screen-left')
+const right = document.querySelector('.screen-right')
+const container = document.querySelector('.split-screen-container')
+
+
+left.addEventListener('mouseenter', () => container.classList.add('hover-left'))
+left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
+right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
+right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
+
