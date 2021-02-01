@@ -860,8 +860,6 @@ footer {
   color: white;
 }
 
-
-
 .card-ex-panel.active-ex h2 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.5s;
@@ -1346,7 +1344,7 @@ td{
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >> FORM-STYLE  << */
+/* >> FORM-STYLE << */
 /* ========================================================================================================================== */
 
 /* <<___(FORM-STYLE)________________________________________________________________(DESKTOP)___>> */
@@ -1373,28 +1371,11 @@ input[type=text], input[type=email], input[type=number], select, textarea {
   transition: border .5s, background 0.8s;
 }
 
-input[type=text]:hover {
+select:hover, textarea:hover, input[type=number]:hover, input[type=email]:hover, input[type=text]:hover, input[type=password]:hover  {
   border: 1px red solid;
   background-color: #e0dfdf;
 }
 
-input[type=email]:hover {
-  border: 1px red solid;
-  background-color: #e0dfdf;
-}
-
-input[type=number]:hover {
-  border: 1px red solid;
-}
-
-select:hover {
-  border: 1px red solid;
-}
-
-textarea:hover {
-  border: 1px red solid;
-  background-color: #e0dfdf;
-}
 
 /* <<<<< (SUBMIT-BTN) >>>>> */
 input[type=submit] {
@@ -1406,6 +1387,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 /* <<<<< (SUBMIT-BTN-HOVER) >>>>> */
@@ -1454,133 +1436,126 @@ input[type=submit]:hover {
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >> LOGIN-FORM  << */
+/* >> LOGIN-FORM << */
 /* ========================================================================================================================== */
 
 /* <<___(LOGIN-FORM)________________________________________________________________(DESKTOP)___>> */
 
-/* <<<<< () >>>>> */
+/* <<<----------( Full-width input fields )---------->>> */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 
 
-	/* Full-width input fields */
-	input[type=text], input[type=password] {
-	  width: 100%;
-	  padding: 12px 20px;
-	  margin: 8px 0;
-	  display: inline-block;
-	  border: 1px solid #ccc;
-	  box-sizing: border-box;
-	}
+/* <<<----------( Set a style for all buttons )---------->>> */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* <<<----------( Extra styles for the cancel button )---------->>> */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* <<<----------( Center the image and position the close button )---------->>> */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* <<<----------( The Modal-background )---------->>> */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* <<<----------( Modal Content/Box )---------->>> */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* <<<----------( The Close Button (x) )---------->>> */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+/* <<<----------( Add Zoom Animation )---------->>> */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
 	
-	/* Set a style for all buttons */
-	button {
-	  background-color: #4CAF50;
-	  color: white;
-	  padding: 14px 20px;
-	  margin: 8px 0;
-	  border: none;
-	  cursor: pointer;
-	  width: 100%;
-	}
+
 	
-	button:hover {
-	  opacity: 0.8;
-	}
 	
-	/* Extra styles for the cancel button */
-	.cancelbtn {
-	  width: auto;
-	  padding: 10px 18px;
-	  background-color: #f44336;
-	}
 	
-	/* Center the image and position the close button */
-	.imgcontainer {
-	  text-align: center;
-	  margin: 24px 0 12px 0;
-	  position: relative;
-	}
-	
-	img.avatar {
-	  width: 20%;
-	  border-radius: 50%;
-	}
-	
-	.container {
-	  padding: 16px;
-	}
-	
-	span.psw {
-	  float: right;
-	  padding-top: 16px;
-	}
-	
-	/* The Modal (background) */
-	.modal {
-	  display: none; /* Hidden by default */
-	  position: fixed; /* Stay in place */
-	  z-index: 1; /* Sit on top */
-	  left: 0;
-	  top: 0;
-	  width: 100%; /* Full width */
-	  height: 100%; /* Full height */
-	  overflow: auto; /* Enable scroll if needed */
-	  background-color: rgb(0,0,0); /* Fallback color */
-	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	  padding-top: 60px;
-	}
-	
-	/* Modal Content/Box */
-	.modal-content {
-	  background-color: #fefefe;
-	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-	  border: 1px solid #888;
-	  width: 50%; /* Could be more or less, depending on screen size */
-	}
-	
-	/* The Close Button (x) */
-	.close {
-	  position: absolute;
-	  right: 25px;
-	  top: 0;
-	  color: #000;
-	  font-size: 35px;
-	  font-weight: bold;
-	}
-	
-	.close:hover,
-	.close:focus {
-	  color: red;
-	  cursor: pointer;
-	}
-	
-	/* Add Zoom Animation */
-	.animate {
-	  -webkit-animation: animatezoom 0.6s;
-	  animation: animatezoom 0.6s
-	}
-	
-	@-webkit-keyframes animatezoom {
-	  from {-webkit-transform: scale(0)} 
-	  to {-webkit-transform: scale(1)}
-	}
-	  
-	@keyframes animatezoom {
-	  from {transform: scale(0)} 
-	  to {transform: scale(1)}
-	}
-	
-	/* Change styles for span and cancel button on extra small screens */
-	@media screen and (max-width: 300px) {
-	  span.psw {
-		 display: block;
-		 float: none;
-	  }
-	  .cancelbtn {
-		 width: 100%;
-	  }
-	}
 
 
 /* <<___(LOGIN-FORM)________________________________________________________________(TABLET-LANDSCAPE)___>> */
@@ -1590,7 +1565,21 @@ input[type=submit]:hover {
 @media (max-width: 768px) { }
 
 /* <<___(LOGIN-FORM)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
-@media (max-width: 600px) { }
+@media (max-width: 600px) { 
+
+  /* <<<<< (Change styles for span and cancel button on extra small screens) >>>>> */
+  span.psw {
+    display: block;
+    float: none;
+   }
+   .cancelbtn {
+    width: 100%;
+   }
+
+
+
+
+}
 
 /* <<___(LOGIN-FORM)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { }
@@ -1606,21 +1595,21 @@ input[type=submit]:hover {
 /* >> SIGN-FORM  << */
 /* ========================================================================================================================== */
 
-/* <<___(SIGN-FORM )________________________________________________________________(DESKTOP)___>> */
+/* <<___(SIGN-FORM)________________________________________________________________(DESKTOP)___>> */
 
-/* <<<<< () >>>>> */
+/* <<<<----------( )---------->>>> */
 
 
-/* <<___(SIGN-FORM )________________________________________________________________(TABLET-LANDSCAPE)___>> */
+/* <<___(SIGN-FORM)________________________________________________________________(TABLET-LANDSCAPE)___>> */
 @media (max-width: 1199px) { }
 
-/* <<___(SIGN-FORM )________________________________________________________________(TABLET-PORTRAIT)___>> */
+/* <<___(SIGN-FORM)________________________________________________________________(TABLET-PORTRAIT)___>> */
 @media (max-width: 768px) { }
 
-/* <<___(SIGN-FORM )________________________________________________________________(MOBILE-LANDSCAPE)___>> */
+/* <<___(SIGN-FORM)________________________________________________________________(MOBILE-LANDSCAPE)___>> */
 @media (max-width: 600px) { }
 
-/* <<___(SIGN-FORM )________________________________________________________________(MOBILE-PORTRAIT)___>> */
+/* <<___(SIGN-FORM)________________________________________________________________(MOBILE-PORTRAIT)___>> */
 @media (max-width: 400px) { }
 
 
@@ -1635,6 +1624,7 @@ input[type=submit]:hover {
 
 /* <<___(BUTTON-STYLE)________________________________________________________________(DESKTOP)___>> */
 
+/* <<<<----------( 1 )---------->>>> */
 .btn-link {
   padding: 15px 30px;
   border: 1px solid black;
@@ -1653,6 +1643,9 @@ input[type=submit]:hover {
   transition: background .3s;
 }
 
+
+
+/* <<<<----------( 2 )---------->>>> */
 .btn-link-w {
   padding: 15px 30px;
   border: 1px solid white;
@@ -1671,6 +1664,10 @@ input[type=submit]:hover {
   background-color: white;
   transition: background .3s;
 }
+
+/* <<<<----------( 3 )---------->>>> */
+
+
 
 
 
@@ -1697,6 +1694,7 @@ input[type=submit]:hover {
 /* ========================================================================================================================== */
 
 /* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(DESKTOP)___>> */
+
 .display-content {
   /* transform: translatex(400%); */
   opacity: 0;
@@ -1718,6 +1716,7 @@ input[type=submit]:hover {
 
 /* <<___(SHOW-CONTENT-ON-SCROLL)________________________________________________________________(TABLET-PORTRAIT)___>> */
 @media (max-width: 768px) { 
+
   .display-content {
     opacity: 1;
   }
@@ -1888,12 +1887,13 @@ input[type=submit]:hover {
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >>   << */
+/* >>   <<   */
 /* ========================================================================================================================== */
 
-/* <<___()________________________________________________________________(DESKTOP)___>> */
+/* <<___()________________________________________________________________(DESKTOP-LAPTOP)___>> */
 
-/* <<<<< () >>>>> */
+/*   <<<----------( )---------->>>   */
+
 
 
 /* <<___()________________________________________________________________(TABLET-LANDSCAPE)___>> */

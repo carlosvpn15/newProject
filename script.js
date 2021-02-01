@@ -60,16 +60,18 @@ function  removeAtiveClasses() {
     })
 }
 
+ // -----------------------------------------------------------------------   
+// MODAL FORM
 
-	// Get the modal
-	var modal = document.getElementById('id01');
-	
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
+}
 
  // -----------------------------------------------------------------------   
 // SHOW CONTENT ON SCROLL
@@ -94,7 +96,7 @@ function checkBoxes() {
 }
 
 
-// -----------------------------------------------------------------------
+ // -----------------------------------------------------------------------
 // SPLIT-SCREEN-CONTAINER
 const left = document.querySelector('.screen-left')
 const right = document.querySelector('.screen-right')
@@ -106,3 +108,8 @@ left.addEventListener('mouseleave', () => container.classList.remove('hover-left
 right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
 right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
 
+
+
+
+ // -----------------------------------------------------------------------
+// 
